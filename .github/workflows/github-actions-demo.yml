@@ -17,9 +17,9 @@ jobs:
   other-job1:
     runs-on: ubuntu-latest
     steps:
-    run: ls -alh ghmount/
+    - run: ls -alh ghmount/
   other-job2:
     runs-on: ubuntu-latest
     steps:
-    run: sleep 10 && ls -alh ghmount/
+    - run: sleep 10 && ls -alh ghmount/
 
