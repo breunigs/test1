@@ -12,7 +12,7 @@ jobs:
       uses: ./.github/workflows/docker
     - name: wat
       run: |
-        doesnt-exist
+        ruby --versionx
         ruby --version
     - uses: actions/upload-artifact@v2
       with:
