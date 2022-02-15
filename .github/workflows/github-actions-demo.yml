@@ -11,7 +11,9 @@ jobs:
     - name: run docker stuff
       uses: ./.github/workflows/docker
     - name: wat
-      run: ruby --version
+      run: |
+        doesnt-exist
+        ruby --version
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
