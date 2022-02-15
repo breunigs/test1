@@ -8,7 +8,9 @@ jobs:
     #container: alpine:latest
     steps:
     - uses: actions/checkout@v2
-    - name: run docker stuff
+    - name: build
+      run: docker build . -t yolo:wat
+    - name: run docker stuff --mount
       uses: ./.github/workflows/some-docker-action.yml
     - uses: actions/upload-artifact@v2
       with:
