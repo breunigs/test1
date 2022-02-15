@@ -7,5 +7,12 @@ jobs:
     # Docker Hub image that `container-job` executes in
     #container: alpine:latest
     steps:
-    - name: run docker stuff
-      run: docker run hello-world
+    - uses: actions/checkout@v2
+    - name: build
+      run: docker build . -t yolo:wat
+    - name: run docker stuff --mount
+      run: docker run yolo:wat --mount type=bind,source=${{ env.GITHUB_WORKSPACE }}/ghmount,target=/ghmount
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: ghmount/yolo
