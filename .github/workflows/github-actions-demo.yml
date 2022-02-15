@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: run docker stuff
-      uses: ./.github/workflows/some-docker-action.yml
+      uses: ./.github/workflows/docker
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact

@@ -1,18 +1,6 @@
-name: GitHub Actions Demo
-on: [push]
-jobs:
-  container-job:
-    # Containers must run in Linux based operating systems
-    runs-on: ubuntu-latest
-    # Docker Hub image that `container-job` executes in
-    #container: alpine:latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: build
-      run: docker build . -t yolo:wat
-    - name: run docker stuff --mount
-      uses: ./.github/workflows/some-docker-action.yml
-    - uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: ghmount/yolo
+# action.yml
+name: 'whatever'
+description: 'whatever'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
