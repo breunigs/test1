@@ -11,7 +11,7 @@ jobs:
     - name: build
       run: docker build . -t yolo:wat
     - name: run docker stuff --mount
-      run: docker run yolo:wat --mount type=bind,source=${{ env.GITHUB_WORKSPACE }}/ghmount,target=/ghmount
+      run: docker run yolo:wat
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
