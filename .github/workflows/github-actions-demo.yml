@@ -6,5 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     # Docker Hub image that `container-job` executes in
     #container: alpine:latest
-    - name: run docker stuff 
+    steps:
+    - name: run docker stuff
       run: docker run hello-world
