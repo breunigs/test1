@@ -11,7 +11,8 @@ jobs:
     - name: build
       run: docker build . -t yolo:wat
     - name: run docker stuff --mount
-      uses: docker://yolo:wat
+      using: 'docker'
+      image: 'Dockerfile'
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
