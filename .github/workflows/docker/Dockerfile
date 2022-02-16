@@ -1,5 +1,5 @@
 FROM alpine:latest
 
-RUN apk add bash
+RUN apk add bash docker
 
-ENTRYPOINT ["bash", "-c", "env && echo hi > $GITHUB_WORKSPACE/ghmount/yolo"]
+ENTRYPOINT ["docker", "run", "hello-world"]
